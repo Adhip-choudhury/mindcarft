@@ -149,3 +149,49 @@ function my_keydown(e){
         console.log("b key is pressed");
       }
 }
+
+
+function left(){
+
+  if (player_X>10){
+  player_X=player_X-block_image_width;
+  console.log("New cordinates are "+"X="+player_X+", Y="+player_Y);
+  canvas.remove(player_Object);
+  player_Update();
+
+  }
+}
+
+function right(){
+
+  if (player_X<1290){
+  player_X=player_X+block_image_width;
+  console.log("New cordinates are "+"X="+player_X+", Y="+player_Y);
+  canvas.remove(player_Object);
+  player_Update();
+
+  }
+}
+
+function up(){
+
+  if (player_Y>10){
+    player_Y=player_Y-block_image_height;
+  console.log("New cordinates are "+"X="+player_X+", Y="+player_Y);
+  canvas.remove(player_Object);
+  player_Update();
+
+  }
+}
+
+
+function down(){
+
+  if (player_Y<790){
+    player_Y=player_Y+block_image_height;
+  console.log("New cordinates are "+"X="+player_X+", Y="+player_Y);
+  canvas.remove(player_Object);
+  player_Update();
+
+  }
+}
